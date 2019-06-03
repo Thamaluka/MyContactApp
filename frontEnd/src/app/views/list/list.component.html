@@ -1,0 +1,56 @@
+<ng-container *ngIf="list === null; else elseTemplate">
+  <div class="empty">
+      <b>Your list is empty... Add new contact!!</b>
+  </div>
+
+</ng-container>
+<ng-template #elseTemplate>
+  <div class="container">
+
+    <div class="row">
+
+      <div class="col-3 mt-3" *ngFor="let contact of list">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <div class="iconTask">
+              <a (click)="deletePerson(contact.id)"><i class="far fa-trash-alt delete" id='iconTask'></i></a>
+            </div>
+
+
+            <div class="itemCard">
+              <img src="../../../assets/img/personDefault.jpg" />
+            </div>
+
+            <div class="itemCard">
+              <h5>{{contact.name}}</h5>
+            </div>
+
+            <div class="itemCard">
+              <i class="fas fa-mobile-alt phone" id=user-name></i>
+              <i class="fas fa-envelope mail" id=user-name></i>
+              <i class="fab fa-whatsapp whatsApp" id=user-name></i>
+            </div>
+            <hr />
+
+            <div *ngFor="let item of contact.contacts; index as i">
+              <div class="contacts" *ngIf="i<1">
+                <i [ngClass]="{'fas fa-envelope': item.idType === 1}" id=icon-contact></i>
+                <i [ngClass]="{'fas fa-mobile-alt ': item.idType === 2}" id=icon-contact></i>
+                <i [ngClass]="{'fab fa-whatsapp': item.idType === 3}" id=icon-contact></i>
+                <p> {{item.contact}}</p>
+              </div>
+            </div>
+
+
+            <div class="itemCard">
+              <a (click)="goToContact(contact)">
+                <i class="fas fa-plus"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</ng-template>

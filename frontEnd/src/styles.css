@@ -1,0 +1,60 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@font-face {
+  font-family: roboto;
+  src: url(./fonts/Roboto-Regular.ttf) format("opentype");
+}
+
+.btn-outline-primary, 
+.btn-outline-primary:active, 
+.btn-outline-primary:hover,
+.btn-outline-primary:visited,
+.btn-outline-primary:checked,
+.btn-outline-primary::placeholder,
+.btn-outline-primary  {
+  background-color: white !important;
+  border-color: #a27ce6;
+  color: #a27ce6;
+  border-radius: 50px;
+  font-size: 15px;
+  font-family: roboto;
+}
+
+.btn-outline-info, 
+.btn-outline-info:active, 
+.btn-outline-info:hover,
+.btn-outline-info:visited,
+.btn-outline-info:checked,
+.btn-outline-info::placeholder,
+.btn-outline-info  {
+  background-color: white !important;
+  border-color: #a27ce6;
+  color: #a27ce6;
+  font-size: 15px;
+  font-family: roboto;
+}
+
+
+.btn-outline-secondary, 
+.btn-outline-secondary:active, 
+.btn-outline-secondary:hover,
+.btn-outline-secondary:visited,
+.btn-outline-secondary:checked,
+.btn-outline-secondary::placeholder,
+.btn-outline-secondary
+.btn-outline-secondary:checked {
+    background-color: #a27ce6 !important;
+    color:  #ffffff !important;
+    border-color: #a27ce6;
+    border-radius: 50px;
+}
+
+
+.card{
+  border-width: 0px;
+}
+a:hover,
+a{
+  color: inherit;
+  text-decoration: none;
+}
